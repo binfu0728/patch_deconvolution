@@ -1,0 +1,16 @@
+{
+	"array_pitch" : 0.001,
+	"array_direction" : "horizontal",
+	"array_rot" : 0,
+	"array_dx" : 0,
+	"array_dy" : 0,
+	"NA" : 1.3,
+	"f_obj" : 0.003,
+	"f_tube" : 0.18,
+	"f_fl" : 0.125,
+	"f_u" : 0.0367,
+	"wavelength" : 6e-07,
+	"n_medium" : 1.518,
+	"axial_range" : 2.5001e-05,
+	"cam_pixsize" : 6.5e-06
+}
