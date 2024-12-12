@@ -10,6 +10,7 @@ function E_bfp = getFieldBFP(Z,system)
     NA = system.NA; %numerical aperture of the objective
     wavelength = system.wavelength; %peak wavelength emission (in m)
     n_medium   = system.n_medium; %refractive index of the sample medium
+    n_immersion = system.n_immersion; %refractive index of the immersion oil
     cam_xscale = system.xscale; %how much the image is larger compared to back focal plane (bfp) size in x direction (e.g., image is 1000x1000, bfp is 800x400, then xscale is 1.25)
     cam_yscale = system.yscale; %how much the image is larger compared to back focal plane (bfp) size in y direction (e.g., image is 1000x1000, bfp is 800x400, then yscale is 2.5)
     cam_size   = system.imsz; %size of an image
@@ -24,7 +25,7 @@ function E_bfp = getFieldBFP(Z,system)
     [x,y]   = meshgrid(linspace(-rho_max*cam_xscale,rho_max*cam_xscale,Nx),...
                        linspace(-rho_max*cam_yscale,rho_max*cam_yscale,Ny));
     [phi,rho] = cart2pol(x,y);
-    aperture  = rho < rho_max;
+    aperture  = rho < rho_max*(n_medium/n_immersion);
 
     % move emitter in object space in z direction by adding defocus
     k0      = 2*pi/wavelength;
