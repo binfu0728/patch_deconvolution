@@ -14,7 +14,7 @@ covFilename = []; %if this is empty, the default name will be used (i.e., centre
 centreOfViews = load.loadCentreOfViewFile(covdir,img(:,:,1),covFilename); %use default centres, load from existed files or draw a new one
 
 %% psf simulation
-psf = core.getPSF(size(img),system,centreOfViews,0);
+psf = core.getPSF(size(img),system,centreOfViews,plotflag);
 
 %% RL deconvolution
 [OTF,OTFm] = core.calcOTF(psf); %calculate optical transfer function from point spread function
