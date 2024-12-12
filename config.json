@@ -10,7 +10,7 @@
 	"f_fl" : 0.125,
 	"f_u" : 0.0367,
 	"wavelength" : 6e-07,
-	"n_medium" : 1.518,
+	"n_medium" : 1.33,
 	"n_immersion" : 1.406,
 	"axial_range" : 2.5001e-05,
 	"cam_pixsize" : 6.5e-06
